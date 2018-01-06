@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.itskshitizsh.courtcounter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/basketballbackground" />
+
+    <TextView
+        android:id="@+id/teamA_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/backgroundImage"
+        android:layout_alignTop="@+id/backgroundImage"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/teamA"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/teamB_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/teamA_text_view"
+        android:layout_alignBottom="@+id/teamA_text_view"
+        android:layout_alignEnd="@+id/reset"
+        android:layout_alignRight="@+id/reset"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="@string/teamB"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/scoreA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scoreB"
+        android:layout_alignBottom="@+id/scoreB"
+        android:layout_alignLeft="@+id/teamA_text_view"
+        android:layout_alignStart="@+id/teamA_text_view"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/scoreB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/teamB_text_view"
+        android:layout_alignRight="@+id/teamB_text_view"
+
+        android:layout_below="@+id/teamB_text_view"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/button3a"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/reset"
+        android:layout_alignStart="@+id/reset"
+        android:layout_below="@+id/scoreB"
+        android:text="+3 Points"
+        android:onClick="Point3A" />
+
+    <Button
+        android:id="@+id/button3b"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/reset"
+        android:layout_alignRight="@+id/reset"
+        android:layout_below="@+id/scoreB"
+        android:text="+3 Points"
+        android:onClick="Point3B" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/backgroundImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginRight="69dp"
+        android:text="RESET"
+        android:onClick="Reset" />
+
+    <Button
+        android:id="@+id/button2a"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignBaseline="@+id/button2b"
+        android:layout_alignBottom="@+id/button2b"
+        android:layout_alignLeft="@+id/button3a"
+        android:layout_alignStart="@+id/button3a"
+        android:text="+2 Points"
+        android:onClick="Point2A" />
+
+    <Button
+        android:id="@+id/button2b"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/button3b"
+        android:layout_alignStart="@+id/button3b"
+        android:layout_below="@+id/button3b"
+        android:layout_marginTop="34dp"
+        android:text="+2 Points"
+        android:onClick="Point2B" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/button2a"
+        android:layout_alignStart="@+id/button2a"
+        android:layout_below="@+id/button2a"
+        android:layout_marginTop="30dp"
+        android:text="Free Throw"
+        android:onClick="Point1A" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/button2b"
+        android:layout_alignStart="@+id/button2b"
+        android:layout_below="@+id/button2b"
+        android:layout_marginTop="30dp"
+        android:text="Free Throw"
+        android:onClick="Point1B" />
+
+</RelativeLayout>
